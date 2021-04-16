@@ -1,0 +1,38 @@
+.line {
+  width: 50rem;
+  height: 2px;
+  margin: 0 auto;
+}
+
+.line--w {
+  background-color: $text-grey;
+}
+
+.line--b {
+  background-color: rgb(98, 98, 129);
+  margin: 0 auto;
+}
+
+.heading--l {
+  font-size: 6rem;
+}
+
+.heading--m {
+  font-size: 4.5rem;
+}
+
+.heading--s {
+  font-size: 3rem;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.mb-s {
+margin-bottom: 2.5rem;
+}
+
+.mt--m {
+  margin-top: 3rem;
+}
