@@ -39,3 +39,37 @@ html {
         grid-template-columns:[full-start] minmax(2.5rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content, 1fr)[col-end]) [center-end] minmax(2.5rem,1fr) [full-end];
     }
 }
+
+.bottle {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+
+    &__info {
+        text-align: center;
+
+        &>* {
+            margin-top: 2rem;
+        }
+    }
+
+    .button:active,
+    .button:visited,
+    .button:link {
+        margin-top: 5rem;
+        text-decoration: none;
+        color: #000;
+        background-color: rgb(165, 162, 162);
+
+        padding: 2rem 4rem;
+        transition: all .3s;
+
+        &:hover {
+            background-color: rgb(195, 195, 195);
+        }
+    }
+}

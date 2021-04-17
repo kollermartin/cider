@@ -23,7 +23,10 @@
         <li class="navigation__item nav--about"><a>O nás</a></li>
         <li class="navigation__item nav--contact"><a>Kontakt</a></li>
       </ul>
-      <div class="logo" style="visibility: hidden;"><img src="img/logo.png" alt="" srcset=""></div>
+      <ul class="language">
+        <li class="language__item"><a href="#">CZ</a></li>
+        <li class="language__item"><a href="#">EN</a></li>
+      </ul>
     </header>
     <section class="landscape">
         <div class="landscape_logo"><img src="img/logo.png" alt="" srcset=""></div>
@@ -34,7 +37,7 @@
       <div class="story__input">
         <form class="form">
           <input type="email" class="form__field" placeholder="Kód láhve" />
-          <button type="button" class="btn btn--primary">Zjistit</button>
+          <button onclick="pageRedirect()" type="button" class="btn btn--primary" id="bottleButton">Zjistit</button>
         </form>
       </div>
     </section>

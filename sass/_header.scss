@@ -32,9 +32,11 @@
         
         &__item {
             padding: 0 1.5rem;
-           
+            transition: all .3s;
+
            &:hover {
                cursor: pointer;
+               color: rgb(179, 161, 161);
            }
             
             a:visited,
@@ -48,5 +50,27 @@
         }
 
         
+    }
+
+    .language {
+        list-style: none;
+        display: flex;
+
+        &__item {
+            padding: 0 1.5rem;
+        }
+
+       
+
+        a:visited,
+        a:active,
+        a:link {
+                text-decoration: none;
+                color: $text-grey;
+                transition: all .3s;
+                &:hover {
+                    color: rgb(179, 161, 161);
+                }
+            }
     }
 }
