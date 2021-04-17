@@ -129,7 +129,7 @@ html {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  padding: 8rem 0;
+  padding: 15rem 0;
 }
 
 @media only screen and (max-width: 81.25em) {
@@ -197,12 +197,21 @@ html {
 }
 
 .contact {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5/6;
   padding: 2.5rem 0;
-  margin: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact__heading {
@@ -210,13 +219,31 @@ html {
 }
 
 .contact__body {
-  padding: 5rem 7rem;
+  margin: 5rem 0;
+  padding: 5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 3rem;
+  min-height: 60vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 148, 149, 0.8)), to(rgba(140, 148, 149, 0.8))), url(../img/ss_pack.jpg);
+  background-image: linear-gradient(rgba(140, 148, 149, 0.8), rgba(140, 148, 149, 0.8)), url(../img/ss_pack.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contact__body > * {
+  margin-top: 2rem;
 }
 
 .contact .icon {
@@ -478,7 +505,7 @@ footer {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6/7;
-  padding: 2.5rem;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,7 +515,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .line {
@@ -532,7 +559,7 @@ footer {
 
 .about {
   padding: 5rem 0;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
@@ -549,14 +576,23 @@ footer {
 }
 
 .about__article {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(182, 185, 185, 0.8)), to(rgba(182, 185, 185, 0.8))), url(../img/cider_landscape.jpg);
+  background-image: linear-gradient(rgba(182, 185, 185, 0.8), rgba(182, 185, 185, 0.8)), url(../img/cider_landscape.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.5rem;
   margin: 5rem auto;
-  line-height: 5rem;
+  line-height: 8rem;
+  letter-spacing: .2rem;
+  min-height: 60vh;
   padding: 5rem 10rem;
 }
