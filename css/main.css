@@ -283,7 +283,7 @@ html {
   background: #fff;
   -webkit-box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.363);
           box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.363);
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.322);
   outline: 0;
   padding: 22px 18px;
   font-size: 2rem;
