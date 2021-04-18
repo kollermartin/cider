@@ -321,6 +321,7 @@ html {
   -ms-grid-row-span: 1;
   grid-row: 5/6;
   padding: 2.5rem 0;
+  margin-top: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,6 +339,7 @@ html {
 }
 
 .contact__body {
+  margin-top: 5rem;
   padding: 5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,6 +473,7 @@ footer {
 }
 
 .about__article {
+  margin-top: 5rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.8)), to(rgba(212, 212, 212, 0.8))), url(../img/cider_landscape.jpg);
   background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/cider_landscape.jpg);
   background-attachment: fixed;
