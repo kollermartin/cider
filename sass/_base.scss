@@ -21,11 +21,11 @@ html {
     }
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 47%;
+        font-size: 45%;
     }
 
     @media only screen and (max-width: $bp-min) {
-        font-size: 44%;
+        font-size: 40%;
     }
 }
 
@@ -41,6 +41,11 @@ html {
 }
 
 .bottle {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/cider_landscape.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -63,13 +68,13 @@ html {
         margin-top: 5rem;
         text-decoration: none;
         color: #000;
-        background-color: rgb(165, 162, 162);
+        background-color: rgb(255, 255, 255);
 
-        padding: 2rem 4rem;
+        padding: 2rem 8rem;
         transition: all .3s;
 
         &:hover {
-            background-color: rgb(195, 195, 195);
+            background-color: rgb(128, 124, 124);
         }
     }
 }

@@ -15,7 +15,7 @@ html {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-@media only screen and (max-width: 81.25em) {
+@media only screen and (max-width: 86.875em) {
   html {
     font-size: 55%;
   }
@@ -27,15 +27,15 @@ html {
   }
 }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 40.625em) {
   html {
-    font-size: 47%;
+    font-size: 45%;
   }
 }
 
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 29.1em) {
   html {
-    font-size: 44%;
+    font-size: 40%;
   }
 }
 
@@ -51,7 +51,7 @@ html {
       grid-template-rows: 100vh repeat(4, min-content);
 }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 40.625em) {
   .container {
     -ms-grid-columns: [full-start] minmax(2.5rem, 1fr) [center-start] ([col-start] minmax(min-content, 1fr) [col-end])[8] [center-end] minmax(2.5rem, 1fr) [full-end];
         grid-template-columns: [full-start] minmax(2.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 1fr) [col-end]) [center-end] minmax(2.5rem, 1fr) [full-end];
@@ -60,6 +60,12 @@ html {
 }
 
 .bottle {
+  grid-column: full-start / full-end;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.8)), to(rgba(212, 212, 212, 0.8))), url(../img/cider_landscape.jpg);
+  background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/cider_landscape.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,8 +97,8 @@ html {
   margin-top: 5rem;
   text-decoration: none;
   color: #000;
-  background-color: #a5a2a2;
-  padding: 2rem 4rem;
+  background-color: white;
+  padding: 2rem 8rem;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -100,7 +106,7 @@ html {
 .bottle .button:active:hover,
 .bottle .button:visited:hover,
 .bottle .button:link:hover {
-  background-color: #c3c3c3;
+  background-color: #807c7c;
 }
 
 .header {
@@ -127,22 +133,20 @@ html {
   cursor: default;
 }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 40.625em) {
   .header {
     padding: 0;
   }
 }
 
-@media only screen and (max-width: 30em) {
-  .header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .header .logo img {
   height: 7rem;
+}
+
+@media only screen and (max-width: 29.1em) {
+  .header .logo {
+    display: none;
+  }
 }
 
 .header .navigation {
@@ -156,6 +160,12 @@ html {
   padding: 0 1.5rem;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media only screen and (max-width: 29.1em) {
+  .header .navigation__item {
+    padding: 0 1rem;
+  }
 }
 
 .header .navigation__item:hover {
@@ -182,6 +192,12 @@ html {
   padding: 0 1.5rem;
 }
 
+@media only screen and (max-width: 29.1em) {
+  .header .language__item {
+    padding: 0 1rem;
+  }
+}
+
 .header .language a:visited,
 .header .language a:active,
 .header .language a:link {
@@ -205,15 +221,20 @@ html {
   padding: 15rem 0;
 }
 
-@media only screen and (max-width: 81.25em) {
+.story__heading {
+  text-align: center;
+}
+
+@media only screen and (max-width: 56.25em) {
   .story {
-    padding: 2.5rem 0;
-    grid-column: full-start / full-end;
+    padding: 8rem 0;
   }
 }
 
-.story__heading {
-  text-align: center;
+@media only screen and (max-width: 40.625em) {
+  .story {
+    padding: 5rem 0;
+  }
 }
 
 .story__input {
@@ -269,6 +290,31 @@ html {
   margin-right: 3rem;
 }
 
+@media only screen and (max-width: 40.625em) {
+  .story__input .form__field {
+    margin-bottom: 3rem;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .story__input .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .contact {
   grid-column: full-start / full-end;
   -ms-grid-row: 5;
@@ -292,7 +338,6 @@ html {
 }
 
 .contact__body {
-  margin: 5rem 0;
   padding: 5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,10 +354,11 @@ html {
           align-items: center;
   font-size: 3rem;
   min-height: 60vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 148, 149, 0.8)), to(rgba(140, 148, 149, 0.8))), url(../img/ss_pack.jpg);
-  background-image: linear-gradient(rgba(140, 148, 149, 0.8), rgba(140, 148, 149, 0.8)), url(../img/ss_pack.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.8)), to(rgba(212, 212, 212, 0.8))), url(../img/ss_pack.jpg);
+  background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/ss_pack.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 .contact__body > * {
@@ -347,230 +393,6 @@ html {
 
 .landscape_logo img {
   width: 40rem;
-}
-
-.project {
-  grid-column: center-start / center-end;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4/5;
-  padding: 5rem 0;
-}
-
-.project__heading {
-  text-align: center;
-}
-
-@media only screen and (max-width: 35em) {
-  .project {
-    grid-column: full-start / full-end;
-    padding: 2.5rem;
-  }
-}
-
-.web {
-  margin-top: 7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.219);
-          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.219);
-  padding: 5rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .web {
-    padding: 2rem;
-  }
-}
-
-@media only screen and (max-width: 100em) {
-  .web {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 30em) {
-  .web {
-    padding: 0 0 1rem 0;
-    margin-top: 3.5rem;
-  }
-}
-
-.web__image {
-  position: relative;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.web__image a:visited,
-.web__image a:link,
-.web__image a:active,
-.web__image a:link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.web__image img {
-  width: 55rem;
-  height: 31rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media only screen and (max-width: 100em) {
-  .web__image img {
-    width: 100%;
-  }
-}
-
-@media (hover: hover) {
-  .web__image:hover .linkVisit {
-    -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
-    background-color: #3a3636;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    opacity: 0;
-  }
-  .web__image:hover img {
-    border: 5px solid #fff;
-  }
-  .web__image:hover {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-  }
-}
-
-.web__image .linkVisit {
-  width: 80%;
-  height: 40%;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem 5rem;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  font-size: 5rem;
-  background-color: rgba(58, 54, 54, 0.918);
-  text-transform: uppercase;
-  -webkit-box-shadow: 0px 0px 15px 10px white;
-          box-shadow: 0px 0px 15px 10px white;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-@media only screen and (max-width: 30em) {
-  .web__image .linkVisit {
-    width: 100%;
-    font-size: 3.5rem;
-  }
-}
-
-.web__image .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-@media (hover: hover) {
-  .web__image .overlay:hover {
-    background-color: rgba(141, 133, 128, 0.384);
-    -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.411);
-            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.411);
-  }
-}
-
-.web__info {
-  padding: 0 2.5rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.web__info__heading {
-  text-align: center;
-}
-
-@media only screen and (max-width: 100em) {
-  .web__info__heading {
-    margin-top: 2rem;
-  }
-}
-
-.web__info__description {
-  font-size: 2.5rem;
-  text-align: justify;
-}
-
-.web__info a:visited,
-.web__info a:link,
-.web__info a:active,
-.web__info a:link {
-  color: #000;
-}
-
-.technologyTable {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 2rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.technologyTable .card {
-  margin: 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.technologyTable .card__body img {
-  width: 10rem;
 }
 
 footer {
@@ -638,9 +460,9 @@ footer {
   grid-row: 3/4;
 }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 56.25em) {
   .about {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -649,10 +471,11 @@ footer {
 }
 
 .about__article {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(182, 185, 185, 0.8)), to(rgba(182, 185, 185, 0.8))), url(../img/cider_landscape.jpg);
-  background-image: linear-gradient(rgba(182, 185, 185, 0.8), rgba(182, 185, 185, 0.8)), url(../img/cider_landscape.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 212, 212, 0.8)), to(rgba(212, 212, 212, 0.8))), url(../img/cider_landscape.jpg);
+  background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/cider_landscape.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,9 +486,29 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   font-size: 3.5rem;
-  margin: 5rem auto;
   line-height: 8rem;
   letter-spacing: .2rem;
   min-height: 60vh;
   padding: 5rem 10rem;
+}
+
+@media only screen and (max-width: 86.875em) {
+  .about__article {
+    font-size: 3rem;
+    min-height: 50vh;
+    line-height: 7rem;
+    padding: 2.5rem 7rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about__article {
+    line-height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .about__article {
+    padding: 5rem 2rem;
+  }
 }

@@ -3,11 +3,8 @@
   grid-column: full-start / full-end;
   grid-row: 3/4;
 
-;
-
-
-  @media only screen and (max-width: $bp-small){
-    padding: 2.5rem 0;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem 0;
   }
 
   &__heading {
@@ -15,20 +12,34 @@
   }
 
   &__article {
-    background-image: linear-gradient(rgba(182, 185, 185, 0.8), rgba(182, 185, 185, 0.8)), url(../img/cider_landscape.jpg);
+    background-image: linear-gradient(rgba(212, 212, 212, 0.8), rgba(212, 212, 212, 0.8)), url(../img/cider_landscape.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3.5rem;
-    margin: 5rem auto;
     line-height: 8rem;
     letter-spacing: .2rem;
     min-height: 60vh;
     padding: 5rem 10rem;
 
-    // box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.432);
+    @media only screen and (max-width: $bp-big) {
+      font-size: 3rem;
+      min-height: 50vh;
+      line-height: 7rem;
+      padding: 2.5rem 7rem;
+    }
 
+    @media only screen and (max-width: $bp-medium) {
+      line-height: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 2rem;
+    }
   }
+
+
 }

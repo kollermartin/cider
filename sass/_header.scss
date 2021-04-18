@@ -17,12 +17,14 @@
     @media only screen and (max-width: $bp-small){
         padding: 0;
     }
-    @media only screen and (max-width: $bp-min){
-        justify-content: center;
-    }
+
     .logo {
         img {
             height: 7rem;
+        }
+
+        @media only screen and (max-width: $bp-min){
+            display: none;
         }
     }
 
@@ -33,6 +35,10 @@
         &__item {
             padding: 0 1.5rem;
             transition: all .3s;
+
+            @media only screen and (max-width: $bp-min) {
+                padding: 0 1rem;
+            }
 
            &:hover {
                cursor: pointer;
@@ -58,6 +64,10 @@
 
         &__item {
             padding: 0 1.5rem;
+
+            @media only screen and (max-width: $bp-min) {
+                padding: 0 1rem;
+            }
         }
 
        
