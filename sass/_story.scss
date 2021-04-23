@@ -14,6 +14,14 @@
   @media only screen and (max-width: $bp-small) {
     padding: 5rem 0;
   }
+
+  @media only screen and (max-width: $bp-min) {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .story__input {

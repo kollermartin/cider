@@ -40,6 +40,10 @@
     @media only screen and (max-width: $bp-small) {
       padding: 5rem 2rem;
     }
+
+    @media only screen and (max-width: $bp-min) {
+      min-height: 70vh;
+    }
   }
 
 
