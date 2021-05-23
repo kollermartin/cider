@@ -78,3 +78,28 @@ html {
         }
     }
 }
+
+#flashMessagesContainer{
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+
+    @media only screen and (max-width: 71.875em) {
+        margin-top: 15rem;
+        left: 50%;
+        width: 40vw;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {   
+        width: 70vw;
+    }
+}
+
+.activeFlashMessage {
+    background-color: rgb(97, 95, 95);
+    padding: 1rem 2rem;
+    color: #fff;
+}
+

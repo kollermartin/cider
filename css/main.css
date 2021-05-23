@@ -109,6 +109,35 @@ html {
   background-color: #807c7c;
 }
 
+#flashMessagesContainer {
+  position: absolute;
+  left: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 71.875em) {
+  #flashMessagesContainer {
+    margin-top: 15rem;
+    left: 50%;
+    width: 40vw;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  #flashMessagesContainer {
+    width: 70vw;
+  }
+}
+
+.activeFlashMessage {
+  background-color: #615f5f;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
 .header {
   height: 7rem;
   display: -webkit-box;
