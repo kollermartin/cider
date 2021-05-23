@@ -589,3 +589,135 @@ footer {
     min-height: 70vh;
   }
 }
+
+.login {
+  grid-column: center-start / center-end;
+  grid-row: 1/-1;
+  margin-top: 15rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login #mainContainer a {
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.login #mainContainer a:hover {
+  background-color: grey;
+  padding: 1rem;
+}
+
+.login #batchList {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.login #batchList li {
+  padding: 1rem;
+  text-align: center;
+}
+
+.login #batchCreateFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login #batchCreateFormContainer table {
+  border-collapse: collapse;
+  margin: 5rem 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 55rem;
+}
+
+.login #batchCreateFormContainer table thead {
+  font-size: 2rem;
+}
+
+.login #batchCreateFormContainer table thead th {
+  padding: 1rem;
+}
+
+.login #batchCreateFormContainer table tbody {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login #batchCreateFormContainer table tbody td {
+  padding: 1rem;
+}
+
+.login #batchCreateFormContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login #batchCreateFormContainer form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login #batchCreateFormContainer form .login-submit-button {
+  padding: 1rem 2rem;
+}
+
+.login #batchCreateFormContainer form input[type=text], .login #batchCreateFormContainer form input[type=number] {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.login #batchActionContainer {
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.login .graphContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .graphContainer > * {
+  margin-top: 5rem;
+}

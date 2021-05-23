@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silver Cider</title>
+    <link rel="shortcut icon" href="img/SS_logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"
+        integrity="sha512-tOcHADT+YGCQqH7YO99uJdko6L8Qk5oudLN6sCeI4BQnpENq6riR6x9Im+SGzhXpgooKBRkPsget4EOoH5jNCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="container">
+    <header class="header">
+        <div class="logo"><img src="img/SS_logo.jpg" alt="" srcset=""></div>
+        <ul class="navigation">
+            <li class="navigation__item nav--home"><a>Domů</a></li>
+            <li class="navigation__item nav--story"><a>Rodokmen lahve</a></li>
+            <li class="navigation__item nav--about"><a>O nás</a></li>
+            <li class="navigation__item nav--contact"><a>Kontakt</a></li>
+        </ul>
+        <ul class="language">
+            <li class="language__item"><a href="#">CZ</a></li>
+            <li class="language__item"><a href="#">EN</a></li>
+        </ul>
+    </header>
+    <section class="login">
+        <div id="batchCreateFormContainer">
+            <form class="batch-create-form" name="batchUpdate" method="post"
+                action="/batch/update/5ba02b207fc413000f864ccc" wtx-context="CDC098C1-51DD-4CF3-804D-C2FA9B70C93E">
+                <div class="input"><input type="text" id="batchCodeInput" name="code" value="180801" placeholder="Kód"
+                        wtx-context="20DF443C-6BEB-4755-A5AC-B5B2284A00DE"><input type="text" id="batchYeastInput"
+                        name="yeast" value="Danstar" placeholder="Kvasinky"
+                        wtx-context="5E1297E2-09AC-40EB-8F11-CF5EDBC70CDF"><input type="text" id="batchApplesInput"
+                        name="apples" value="Idared" placeholder="Odrůda jablek"
+                        wtx-context="9BC32830-7D51-4120-B60E-796FD6755023"><input type="number" id="batchSugarInput"
+                        name="sugar" value="10.5" placeholder="Cukernatos" step="0.1"
+                        wtx-context="F029AE64-ABBC-4885-BBF9-22C48B3E59A8"><input type="text" id="batchSugarUnitInput"
+                        name="sugarUnit" value="%" placeholder="Jednotky"
+                        wtx-context="C6E2FE6A-A926-4465-966F-49A95E12794B"><input type="number" id="batchAmountInput"
+                        name="amount" value="50" placeholder="Množství [l]"
+                        wtx-context="EBF5AAC6-72FA-442B-9BB0-EEA83FE74777"><input type="hidden" name="_csrf"
+                        value="bmLwwPRJ-BhdU50XsXae0jrx0S4h3oqL_YZA" wtx-context="1B146DD1-4CFB-494D-8EA7-43584B782955">
+                </div>
+                <div class="actions"><input class="login-submit-button" type="submit" style="width:310px;"
+                        value="Uložit" wtx-context="7D65EA7E-E06E-44AF-AA90-C23348A3744C"></div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Objem lahve</th>
+                        <th>Počet lahví</th>
+                        <th>Exportováno</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>180801</td>
+                        <td>0.333</td>
+                        <td>166</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="batchActionContainer">
+                <h4>Šarže byla celá zlahvována.</h4>
+            </div>
+            <p></p>
+
+        </div>
+        <div class="graphContainer">
+            <div style="width: 600px;">
+                <canvas id="myChart"></canvas>
+                <script>
+                    const labels = [
+                        'January',
+                        'February',
+                        'March',
+                        'April',
+                        'May',
+                        'June',
+                    ];
+                    const data = {
+                        labels: labels,
+                        datasets: [{
+                            label: 'My First dataset',
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data: [0, 10, 5, 2, 20, 30, 45],
+                        }]
+                    };
+        
+                    const config = {
+                        type: 'line',
+                        data,
+                        options: {}
+                    };
+                    var myChart = new Chart(
+                        document.getElementById('myChart'),
+                        config
+                    );
+                </script>
+            </div>
+            <div style="width: 600px;">
+                <canvas id="myChart2" style="border: 1px solid black;"></canvas>
+                
+            <script>
+                const labels2 = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                ];
+                const data2 = {
+                    labels: labels2,
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                    }]
+                };
+    
+                const config2 = {
+                    type: 'line',
+                    data2,
+                    options: {}
+                };
+                var myChart2 = new Chart(
+                    document.getElementById('myChart2'),
+                    config2
+                );
+            </script>
+            </div>
+            <div style="width: 600px;">
+                <canvas id="myChart3" style="border: 1px solid black;"></canvas>
+                
+            <script>
+                const labels3 = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                ];
+                const data3 = {
+                    labels: labels3,
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                    }]
+                };
+    
+                const config3 = {
+                    type: 'line',
+                    data3,
+                    options: {}
+                };
+                var myChart = new Chart(
+                    document.getElementById('myChart3'),
+                    config3
+                );
+            </script>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span>&copy; Copyright Ladislav Šorčík, Silver-Cider.com</span>
+    </footer>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
