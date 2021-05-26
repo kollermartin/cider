@@ -5,16 +5,47 @@
     background-image: linear-gradient(rgba(140, 148, 149, 0.8), rgba(140, 148, 149, 0.8)), url(../img/kh_landscape.jpg);
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: ". ."
+                         "logo logo"
+                         ". ."
+                         "desc desc"
+                         ". .";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
     cursor: default;
 
     letter-spacing: .3rem;
 
     &_logo {
+        margin-top: 7rem;
+        grid-area: logo;
+
+        display: flex;
+        justify-content: center;
+
         img {
             width: 40rem;
+        }
+    }
+
+    &__description {
+        grid-area: desc;
+        display: flex;
+        justify-content: center;
+        ul{
+            list-style: none;
+            margin-left: 3rem;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 3rem;
+            }
+
+            li{
+                font-size: 3.5rem;
+                margin-top: 2rem;
+            }
         }
     }
 }
